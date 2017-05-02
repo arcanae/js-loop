@@ -12,33 +12,68 @@
 <body>
 
 
-    <!--  Version non réduite
-        <script>
+
+    <!--<script> // Exo1 version non réduite
         "use strict";
         let i;
         let num;
         let sp;
         for (i = 0, num = 1, sp = 4; i < 5; i++, num = num + 2, sp--) {
             let x = i.toString();
-            console.log(" ".repeat(sp), x.repeat(num));
+            console.log(" ".repeat(sp) + x.repeat(num));
+        }
+    </script>-->
+
+
+    <!--<script> // Exos 1&2 non détaillés
+        "use strict";
+        let sp;
+        let num;
+        let space;
+                    // Exo 1 réduit 
+        for (let i = 0, sp = 9; i < 10; i++, sp--) {
+            let str = i.toString();
+            console.log(" ".repeat(sp) + str.repeat(i * 2 + 1));
+        }
+        for (let j = 0, num = 19, space = 0; j < 10; j++, num = num - 2, space++) {
+            let x = j.toString();
+            console.log(" ".repeat(space) + x.repeat(num));
         }
     </script>-->
 
     <script>
-        // "use strict";
-        let sp;
-        let num;
-        let space;
-        for (let i = 0, sp = 9; i < 10; i++, sp--) {
+        // Exo 1&2 détaillés
+        "use strict";
+        let sp = 9;
+        let space = 0;
+        for (let i = 0; i < 10;) {
             let str = i.toString();
-            console.log(" ".repeat(sp), str.repeat(i * 2 + 1));
+            console.log(" ".repeat(sp) + str.repeat(i * 2 + 1));
+            i++;
+            sp--;
         }
-        for (let j = 0, num = 19, space = 0; j < 10; j++, num = num - 2, space++) {
+        for (let j = 9; j > -1;) {
             let x = j.toString();
-            console.log(" ".repeat(space), x.repeat(num));
+            console.log(" ".repeat(space) + x.repeat(j * 2 + 1));
+            j--;
+            space++;
         }
     </script>
 
+    <!--<script>
+        // Exo 2.5
+        let x = 0;
+
+        function loop() {
+            console.clear();
+            console.log("0".repeat(x) + "1" + "O".repeat(19 - x));
+            x++;
+            if (x === 20) {
+                x = 0;
+            }
+        }
+        setInterval(loop, 1000)
+    </script>-->
 
 </body>
 
