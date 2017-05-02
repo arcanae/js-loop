@@ -5,23 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Example JS</title>
+    <title>Examble JS Loop</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <script>
-        // hello is a string
-        let hello = "Hello World!";
-        console.log(hello);
 
-        const size = 10;
-        for (let i = 0; i < size; i = i + 1) {
-            // i is a number
-            let str = " ".repeat(size - i);
-            str += i.toString().repeat(i * 2 + 1);
-            console.log(str);
+
+    <!--  Version non réduite
+        <script>
+        "use strict";
+        let i;
+        let num;
+        let sp;
+        for (i = 0, num = 1, sp = 4; i < 5; i++, num = num + 2, sp--) {
+            let x = i.toString();
+            console.log(" ".repeat(sp), x.repeat(num));
+        }
+    </script>-->
+
+    <script>
+        // "use strict";
+        let sp;
+        let num;
+        let space;
+        for (let i = 0, sp = 9; i < 10; i++, sp--) {
+            let str = i.toString();
+            console.log(" ".repeat(sp), str.repeat(i * 2 + 1));
+        }
+        for (let j = 0, num = 19, space = 0; j < 10; j++, num = num - 2, space++) {
+            let x = j.toString();
+            console.log(" ".repeat(space), x.repeat(num));
         }
     </script>
+
+
 </body>
 
 </html>
